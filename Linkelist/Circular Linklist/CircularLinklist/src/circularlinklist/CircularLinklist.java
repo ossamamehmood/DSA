@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author ossam
+ * @author ossamamehmood
  */
 
 class node {
