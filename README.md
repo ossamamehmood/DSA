@@ -6,7 +6,7 @@ Credit Hours : 4
 
 Language : JAVA 
 
-IDE : Netbeans
+Integrated development environments : Netbeans
 
 Teacher : Dr. Mussarat Abdullah
 
