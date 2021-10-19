@@ -10,10 +10,13 @@ Integrated development environments : NETBEANS
 
 ## Topic Covered
 
-- Arrays, Single Dimension Arrays and Multi Dimension Arrays
+- Arrays
   - Single Dimension Arrays
+  - Multi Dimension Arrays
 
-- Linkelist, Single Linkelist, Circular Linkelist
+- Linklist
+  - Single Linklist
+  - Circular Linkelist
 
 ## Support 💓
 
