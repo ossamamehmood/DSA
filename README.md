@@ -12,8 +12,6 @@ Teacher : Dr. Mussarat Abdullah
 
 - Linkelist, Single Linkelist, Circular Linkelist
 
-# Assessable Policy
-
 | Accessible | Everyone          |
 | ------- | ------------------ |
 | Study Purpose   | :white_check_mark: |
