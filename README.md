@@ -4,6 +4,8 @@ Course Code : CSC211
 
 Credit Hours : 4
 
+Language : JAVA (Netbeans)
+
 Teacher : Dr. Mussarat Abdullah
 
 ## Topic Covered
