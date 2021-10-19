@@ -12,6 +12,12 @@ Teacher : Dr. Mussarat Abdullah
 
 - Linkelist, Single Linkelist, Circular Linkelist
 
+# Assessable Policy
+
+| Accessible | Everyone          |
+| ------- | ------------------ |
+| Study Purpose   | :white_check_mark: |
+
 ## Support 💓
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
