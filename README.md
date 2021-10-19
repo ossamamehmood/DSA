@@ -14,10 +14,6 @@ Integrated development environments : NETBEANS
 
 - Linkelist, Single Linkelist, Circular Linkelist
 
-| Accessible | Everyone          |
-| ------- | ------------------ |
-| Study Purpose   | :white_check_mark: |
-
 ## Support 💓
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
