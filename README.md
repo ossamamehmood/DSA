@@ -1,4 +1,4 @@
-# Data Structures and Algorithms
+# Data Structures and Algorithms (DSA)
 
 Course Code : CSC211  
 
