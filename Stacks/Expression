@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+class Node{
+	char info;
+	Node link;
+}
+
+class Stack{
+	Node top;
+	
+	public void push(char item) {
+		Node tmp = new Node();
+		tmp.info = item;
+		tmp.link = top;
+		top = tmp;
+	}
+	
+	public char pop() {
+		Node tmp;
+		if(top == null) {
+			System.out.print("Stack is empty\n");
+			return '\0';
+		}else {
+			tmp = top;
+			top = top.link;
+			return tmp.info;
+		}
+	}
+	
+	public void display() {
+		Node ptr = top;
+		if(top == null)
+			System.out.println("Stack is empty\n");
+		else {
+			while(ptr!=null) {
+				System.out.print(ptr.info+" ");
+				ptr = ptr.link;
+			}
+		}
+	}
+		
+}
+public class ValidExpression {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Stack st = new Stack();
+		
+		System.out.print("Enter Expression to validate: ");
+		String exp = sc.next();
+		
+		boolean valid = true;
+		
+		for(int i=0;i<exp.length();i++) {
+			if(exp.charAt(i) == '[' || exp.charAt(i) == '{' || exp.charAt(i) == '(')
+				st.push(exp.charAt(i));
+			if(exp.charAt(i) == ']' || exp.charAt(i) == '}' || exp.charAt(i) == ')') {
+				if(st.top == null)
+					valid = false;
+				else {
+					char temp = st.pop();
+					if(exp.charAt(i) == ')' && (temp == '{' || temp == '[')) 
+						valid = false;
+					if(exp.charAt(i) == '}' && (temp == '(' || temp == '['))
+						valid = false;
+					if(exp.charAt(i) == ']' && (temp == '(' || temp == '{'))
+						valid = false;
+				}
+			}	
+		}
+		
+		if(st.top != null)
+			valid = false;
+		if(valid)
+			System.out.println("Valid Expression");
+		else
+			System.out.println("Invalid Expression");
+	}
+}
