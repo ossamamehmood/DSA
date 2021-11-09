@@ -18,6 +18,12 @@ Integrated development environments : NETBEANS
   - Single Linklist
   - Circular Linkelist
 
+- Stack
+  - Reverse
+  - Expression
+
+- Application of Stack
+
 ## Support 💓
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
