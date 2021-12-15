@@ -24,6 +24,10 @@ Integrated development environments : NETBEANS
 
 - Application of Stack
 
+- Queue
+  - Circular Queue
+  - Dequeue
+
 ## Support 💓
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
