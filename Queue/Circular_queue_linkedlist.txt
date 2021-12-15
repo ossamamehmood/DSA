@@ -1,0 +1,94 @@
+
+package circular_queue_linkedlist;
+import java.util.Scanner;
+class node{
+    int info;
+    node link;
+}
+class St_LinkedList{
+    node front=null;
+    node rear=null;
+    Scanner s1=new Scanner(System.in);
+    public void insert(){
+        node tmp=new node();
+        int item;
+        String str;
+        System.out.println("Enter the Item to be inserted: ");
+        str=s1.nextLine();
+        item=Integer.parseInt(str);
+        tmp.info=item;
+        tmp.link=null;
+        if(rear==null){
+            rear=tmp;     
+            rear.link=rear;
+        }
+        else{
+            rear.link=rear;    
+            rear.link=tmp;     
+            rear=tmp;
+        }
+    }
+    public void delete(){
+        node tmp,q;
+        if (rear==null){
+            System.out.println("::Queue Underflow::");
+        }
+        if(rear.link==rear){ //if only 1 element
+            rear=null;
+            return;
+        }
+        q=rear.link;
+        rear.link=q.link;
+            System.out.println("Deleted item is "+q.info);
+            
+        }
+    public void Display(){
+        node q;
+        if(rear==null){
+            System.out.println("::Queue is Empty::");
+        }
+        else{
+                System.out.println("Queue is: ");
+                q=rear.link;
+                while(q!=rear){
+                System.out.println(q.info+"   ");
+                q=q.link;
+                }
+                System.out.println(rear.info+"  ");
+                System.out.println();
+            }
+        }
+    
+}
+public class Circular_Queue_LinkedList {
+    public static void main(String[] args) {
+    St_LinkedList top=new St_LinkedList();
+        Scanner s2=new Scanner(System.in);
+        int choice;
+        while(true){
+        System.out.println("Enter 1 to Insert ITEM: ");
+        System.out.println("Enter 2 to Delete ITEM: ");
+        System.out.println("Enter 3 to DISPLAY ITEM: ");
+        System.out.println("Enter 4 to QUIT");
+        choice=s2.nextInt();
+        switch(choice){
+            case 1:
+                top.insert();
+                break;
+            case 2:
+                top.delete();
+                break;
+            case 3:
+                top.Display();
+                break;
+            case 4:
+                System.exit(1);
+                break;
+            default: 
+                System.out.println("::Wrong CHOICE::");
+            }
+                
+        }
+    }
+    
+}

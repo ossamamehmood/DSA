@@ -1,0 +1,207 @@
+package dequeue_linkedlist;
+import java.util.Scanner;
+class Node{                        
+int data;
+Node next;
+Node prev;
+}
+class D_LinkList{
+    Node left=null;
+    Node right=null;
+    
+    
+    Scanner s1=new Scanner(System.in);
+    public void IR(){
+        int ch;
+        while(true){
+            System.out.println("Enter 1 to INSERT FROM RIGHT: ");
+            System.out.println("Enter 2 to DELETE FROM RIGHT: ");
+            System.out.println("Enter 3 to DELETE FROM LEFT: ");
+            System.out.println("Enter 4 to DISPLAY: ");
+            System.out.println("Enter 5 to GO BACK TO MAIN MENU: ");
+            
+            ch=s1.nextInt();
+            switch(ch){
+                case 1:
+                    ifr();
+                    break;
+                case 2:
+                    dfr();
+                    break;
+                case 3:
+                    dfl();
+                    break;
+                case 4:
+                    Display();
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+    public void OR(){
+        int ch;
+        while(true){
+            System.out.println("Enter 1 to INSERT FROM RIGHT: ");
+            System.out.println("Enter 2 to INSERT FROM LEFT: ");
+            System.out.println("Enter 3 to DELETE FROM LEFT: ");
+            System.out.println("Enter 4 to DISPLAY: ");
+            System.out.println("Enter 5 to GO BACK TO MAIN MENU: ");
+            ch=s1.nextInt();
+            switch(ch){
+                case 1:
+                    ifr();
+                    break;
+                case 2:
+                    ifl();
+                    break;
+                case 3:
+                    dfl();
+                    break;
+                case 4:
+                    Display();
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+    public void ifr(){
+        int item;
+        System.out.print("Enter the item to be inserted: ");
+        item=s1.nextInt();
+        Node q;                    
+        Node temp = new Node();    
+        temp.data=item;              
+        if(right== null){
+
+            temp.next=temp;        
+            temp.prev=temp;        
+            right=temp;
+            left=temp;
+        }
+        else{                        
+            q=right;                 
+            
+            temp.prev=q;
+            q.next=temp;
+            temp.next=left;
+            left.prev=temp;
+            right=temp;
+        }
+    }
+    public void ifl(){
+        int item;
+        System.out.print("Enter the item to be inserted: ");
+        item=s1.nextInt();
+        Node q;                    
+        Node temp = new Node();    
+        temp.data=item;              
+        if(left== null){          
+
+            temp.next=temp;        
+            temp.prev=temp;        
+            left=temp;
+            right=temp;
+        }
+        else{                        
+            q=left;                 
+            
+            temp.prev=q.prev;       
+            temp.next=q;          
+            q.prev=temp;           
+            right.next=temp;
+            left=temp;
+        }
+    }
+    public void dfr(){
+        Node q;
+        if(right==null){
+            System.out.println(":::::De-Queue is EMPTY:::::");
+        }
+        else{
+            System.out.println("Deleted Element is: "+right.data);
+            if(right.prev==right){
+                right=null;
+                left=null;
+            }
+            else{
+                q=right.prev;
+                q.next=right.next;
+                left.prev=q;
+                right=q;
+            }
+        }
+    }
+    public void dfl(){
+        Node q;
+        if(left==null){
+            System.out.println(":::::De-Queue is EMPTY:::::");
+        }
+        else{
+            System.out.println("Deleted Element is: "+left.data);
+            if(left.next==left){
+                left=null;
+                right=null;
+            }
+            else{
+                q=left.next;
+                q.prev=left.prev;
+                right.next=q;
+                left=q;
+            }
+        }
+    }
+    public void Display(){
+        {
+        Node q= left;
+        while(q.next!=left){
+        System.out.println(q.data);
+        q=q.next;                  
+        }
+        System.out.println(q.data);
+    
+    
+    }
+    }
+}
+public class DeQueue_LinkedList {
+    public static void main(String[] args) {
+    Scanner s2=new Scanner(System.in);
+        D_LinkList obj=new D_LinkList();
+        int choice;
+        while(true){
+            System.out.println("Enter 1 for INPUT RESTRICTED: ");
+            System.out.println("    1 Includes methods:   ->Insert from Right");
+            System.out.println("                          ->Delete from Right");
+            System.out.println("                          ->Delete from Left\n");
+            
+            System.out.println("Enter 2 for OUTPUT RESTRICTED: ");
+            System.out.println("    2 Includes methods:   ->Insert from Right");
+            System.out.println("                          ->Insert from Left");
+            System.out.println("                          ->Delete from Left\n");
+            
+            System.out.println("Enter 3 to DISPLAY DE-QUEUE");
+            System.out.println("Enter 4 to EXIT: ");
+            choice=s2.nextInt();
+            
+            switch(choice){
+                case 1:
+                    obj.IR();
+                    break;
+                case 2:
+                    obj.OR();
+                    break;
+                case 3:
+                    obj.Display();
+                    break;
+                case 4:
+                    System.exit(1);
+                    break;
+            }
+            
+            
+        }
+    }
+    
+}

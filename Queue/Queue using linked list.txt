@@ -1,0 +1,84 @@
+package queue_linkedlist;
+
+import java.util.Scanner;
+class node{
+    int info;
+    node link;
+}
+class St_LinkedList{
+    node front=null;
+    node rear=null;
+    Scanner s1=new Scanner(System.in);
+    public void insert(){
+        node tmp=new node();
+        int item;
+        String str;
+        System.out.println("Enter the Item to be inserted: ");
+        str=s1.nextLine();
+        item=Integer.parseInt(str);
+        tmp.info=item;
+        tmp.link=null;
+        if(front==null)//empty queue     front=tmp;
+        else    rear.link=tmp;
+        rear=tmp;
+        
+    }
+    public void delete(){
+        if (front==null) 
+	    System.out.println("::Queue Underflow::");
+        else{
+            System.out.println("Deleted item is "+front.info);
+            front=front.link;
+        }
+    }
+    public void Display(){
+        node ptr;
+        ptr=front;
+        if(front==null) System.out.println("::Queue is Empty::");
+        else{
+                System.out.println("Queue is: ");
+                while(ptr!=null){
+                System.out.println(ptr.info+"   ");
+                ptr=ptr.link;
+                }
+                System.out.println();
+            }
+        }
+    
+}
+public class Queue_LinkedList {
+
+    public static void main(String[] args) {
+    St_LinkedList top=new St_LinkedList();
+        Scanner s2=new Scanner(System.in);
+        int choice;
+        while(true){
+        System.out.println("Enter 1 to Insert ITEM: ");
+        System.out.println("Enter 2 to Delete ITEM: ");
+        System.out.println("Enter 3 to DISPLAY ITEM: ");
+        System.out.println("Enter 4 to QUIT");
+        choice=s2.nextInt();
+        switch(choice){
+            case 1:
+                top.insert();
+                break;
+            case 2:
+                top.delete();
+                break;
+            case 3:
+                top.Display();
+                break;
+            case 4:
+                System.exit(1);
+                break;
+            default: 
+                System.out.println("::Wrong CHOICE::");
+            }
+                
+        }
+    }
+    
+}
+
+
++
