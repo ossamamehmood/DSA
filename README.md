@@ -28,7 +28,7 @@ Integrated development environments : NETBEANS
   - Circular Queue
   - Dequeue
 
-  - Tree
+- Tree
   - Binary Search Tree (BST)
 
 ## Support 💓
