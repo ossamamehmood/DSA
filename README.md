@@ -29,7 +29,9 @@ Integrated development environments : NETBEANS
   - Dequeue
 
 - Tree
+  - Binary Tree (BT)
   - Binary Search Tree (BST)
+  - AVL Tree
 
 ## Support 💓
 
