@@ -10,25 +10,25 @@ Integrated development environments : NETBEANS
 
 ## Topic Covered
 
-- Arrays
+# - Arrays
   - Single Dimension Arrays
   - Multi Dimension Arrays
 
-- Linklist
+# - Linklist
   - Single Linklist
   - Circular Linkelist
 
-- Stack
+# - Stack
   - Reverse
   - Expression
 
-- Application of Stack
+# - Application of Stack
 
-- Queue
+# - Queue
   - Circular Queue
   - Dequeue
 
-- Tree
+# - Tree
   - Binary Tree (BT)
   - Binary Search Tree (BST)
   - AVL Tree
