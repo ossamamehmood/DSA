@@ -1,13 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author ossamamehmood
+ */
+
 public class Queue {
-	Node root;
+    
+    Node root;
 	
-	/**
-	 * This method adds details of patient to the queue.
-	 * This method adds patient's detail at the end of the queue as per FIFO functionality.
-	 * @param id stores id of patient
-	 * @param disease stores disease from which patient is suffering.
-	 */
+	 // This method adds details of patient to the queue.
+        
+	 // This method adds patient's detail at the end of the queue as per FIFO functionality.
+        
+	 // id stores id of patient.
+        
+	 // @param disease stores disease from which patient is suffering.
+        
 	void store(int id , String disease) {
+            
 		Node toAdd = new Node(id , disease);
 		
 		if(root == null) {
@@ -24,12 +39,14 @@ public class Queue {
 		temp.next = toAdd;
 	}
 	
-	/**
-	 * This method deletes the entries of patient from queue.
-	 * It deletes first entry present in queue as per FIFO(First In First Out) functionality.
-	 * @throws Exception if queue is empty, it throws exception.
-	 */
+	// This method deletes the entries of patient from queue.
+        
+	// It deletes first entry present in queue as per FIFO(First In First Out) functionality.
+        
+	// @throws Exception if queue is empty, it throws exception.
+        
 	void delete() throws Exception{
+            
 		if(root == null) {
 			throw new Exception("Queue is already empty.");
 		}
@@ -37,10 +54,10 @@ public class Queue {
 		root = root.next;
 	}
 	
-	/**
-	 * This method display queue data.
-	 */
+       // This method display queue data.
+        
 	void print() {
+            
 		if(root == null) {
 			System.out.println("Can't print an empty queue.");
 			return;
@@ -54,12 +71,10 @@ public class Queue {
 		}
 	}
 	
-	/**
-	 * Node class to store different entries of patients.
-	 * @author RUDRAMANI DUBEY
-	 *
-	 */
+       // Node class to store different entries of patients.
+
 	class Node{
+            
 		int id;
 		String disease;
 		
@@ -72,29 +87,36 @@ public class Queue {
 		}
 	}
 
-	// driver / main method
+	// Main method
 	public static void main(String[] args) throws Exception {
+            
 		Queue q = new Queue();
 		
 		// a) Storing information.
-		
-		q.store(250, "Cholera");
-		q.store(456, "Pneumonia");
-		q.store(125, "Jaundice");
-		q.store(654, "Corona");
-		q.store(521, "Dengue");
-		q.store(823, "Influenza");
-		q.store(273, "Chickenpox");
+                
+		q.store(123, "Corona");
+                q.store(345, "Dengue");
+		q.store(567, "Cholera");
+                q.store(789, "Jaundice");
+		q.store(987, "Pneumonia");
+		q.store(765, "Influenza");
+		q.store(543, "Chickenpox");
 		
 		// b) Displaying queue data.
+                
+                // Here, we're displaying the data fro the Queue
+                
 		q.print();
 		
 		// Deleting information.
 		q.delete();
 		q.delete();
 		
+                // Displaying the data after deleccting two node from the queue
 		System.out.println("\nAfter deleting few entries from queue.\n");
 		q.print();
+                
+                
 	}
 
 }
